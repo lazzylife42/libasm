@@ -23,5 +23,14 @@ section .text
         mov rdi, 0
         syscall             ; call Karnel
 
+;------------- COMPILATION -------------
+
 ; nasm -f elf64 hello.s -o hello.o
 ; ld hello.o -o hello
+
+;------------- CONVENTIONS DES REGISTRES -------------
+
+;Linux System V AMD64: 
+; args      -> rdi, rsi, rdx, rcx, r8, r9, pile (droite a gauche)
+; retour    -> rax
+
